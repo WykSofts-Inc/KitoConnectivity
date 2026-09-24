@@ -65,6 +65,7 @@ public final class KitoConnectivityMonitor: KitoViewModel {
         monitor = nil
         self.isOnline = isOnline
         self.connectionType = isOnline ? connectionType : .unknown
+        self.isExpensive = isOnline && connectionType == .cellular
         self.latency = latency
         self.isSimulating = true
         self.quality = KitoNetworkQuality(isOnline: isOnline, latency: latency, isConstrained: false)

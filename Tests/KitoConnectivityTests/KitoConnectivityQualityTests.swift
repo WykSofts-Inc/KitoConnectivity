@@ -62,6 +62,11 @@ final class KitoConnectivitySimulationTests: XCTestCase {
         XCTAssertNotNil(monitor.lastReconnectedAt)
     }
 
+    func testSimulatedCellularIsExpensiveFromTheStart() {
+        XCTAssertTrue(KitoConnectivityMonitor(simulatedOnline: true, connectionType: .cellular).isExpensive)
+        XCTAssertFalse(KitoConnectivityMonitor(simulatedOnline: true, connectionType: .wifi).isExpensive)
+    }
+
     func testRetryWhenOnlineWaitsForTheNetworkThenRetries() async throws {
         let monitor = KitoConnectivityMonitor(simulatedOnline: false)
         var calls = 0
