@@ -1,5 +1,7 @@
 # KitoConnectivity
 
+**[Documentation](https://wyksofts-inc.github.io/KitoConnectivity/documentation/kitoconnectivity/)**
+
 A real, on-device online/offline signal via `NWPathMonitor` — the production
 counterpart to [KitoNetKit](https://github.com/WykSofts-Inc/KitoNetKit),
 which only *simulates* network conditions in DEBUG builds. Use this one in
